@@ -24,9 +24,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useUploadThing } from '@/lib/uploadthing'
 import { Checkbox } from "../ui/checkbox"
-import { eventFormSchema } from "@/lib/validater"
+
 import { useRouter } from "next/navigation"
 import { createEvent } from "@/lib/actions/event.action"
+import { eventFormSchema } from "@/lib/validator"
 type EventFormProms ={
     userId: string
     type: "Create" | "Update"
@@ -65,7 +66,8 @@ const EventForm = ({userId, type}: EventFormProms) => {
 
       }catch (error){
         console.log(error);
-      }
+      } 
+
     }
   }
 
